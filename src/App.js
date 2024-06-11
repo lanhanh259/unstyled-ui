@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import HeadlessUI from './headless'
+import './App.css'
+import Radix from './radix'
+import BaseUi from './baseUI'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div id="app">
+			{/* <HeadlessUI /> */}
+			<Radix />
+			{/* <BaseUi /> */}
+		</div>
+	)
 }
-
-export default App;
+export default App
