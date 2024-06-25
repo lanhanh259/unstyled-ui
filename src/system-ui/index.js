@@ -18,27 +18,6 @@ function SystemUI() {
 	}
 	return (
 		<div>
-			<div>
-				<input
-					type="checkbox"
-					id="vehicle1"
-					name="vehicle1"
-					value="Bike"
-					checked
-				/>
-				<label for="vehicle1"> buy</label>
-				<input
-					type="checkbox"
-					id="sell"
-					name="sell"
-					value="Bike"
-					checked
-				/>
-				<label for="sell" style={{ fontSize: '30px' }}>
-					{' '}
-					sell
-				</label>
-			</div>
 			<Checkbox
 				name="list-color"
 				label="buy"
