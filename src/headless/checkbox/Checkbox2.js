@@ -2,19 +2,17 @@ import { Checkbox, Field, Label } from '@headlessui/react'
 import { useState } from 'react'
 import styled from 'styled-components'
 
-function Example(props) {
+function MyCheckbox(props) {
 	const {
 		id,
 		className,
 		style,
 		color,
-		disabled,
+
 		asField,
 		children,
 		...otherProps
 	} = props
-
-	const [enabled, setEnabled] = useState(false)
 
 	return (
 		<Div
@@ -22,16 +20,10 @@ function Example(props) {
 			className={className}
 			style={style}
 			color={color}
-			disabled={disabled}
-			{...otherProps}
+			disabled={otherProps?.disabled}
 		>
-			<Field className="custom-checkbox-field" as={asField}>
-				<Checkbox
-					className="custom-checkbox-container"
-					checked={enabled}
-					onChange={setEnabled}
-					disabled={disabled}
-				>
+			<Field className="custom-checkbox-field">
+				<Checkbox className="custom-checkbox-container" {...otherProps}>
 					<svg
 						className="custom-checkbox-icon"
 						viewBox="0 0 14 14"
@@ -45,7 +37,7 @@ function Example(props) {
 						/>
 					</svg>
 				</Checkbox>
-				<Label className="custom-checkbox-label ">{children}</Label>
+				<Label className="custom-checkbox-label">{children}</Label>
 			</Field>
 		</Div>
 	)
@@ -89,14 +81,18 @@ const Div = styled.div`
 `
 
 function Checkbox1() {
+	const [enabed1, setEnabled1] = useState(true)
+	const [enabed2, setEnabled2] = useState(false)
+
 	return (
 		<div>
-			<Example>check box</Example>
-			<Example disabled>disabled</Example>
-			<Example color="green">color</Example>
-			<Example style={{ fontSize: '30px', color: 'purple' }}>
-				Label
-			</Example>
+			<MyCheckbox disabled>disabled </MyCheckbox>
+			<MyCheckbox color="blue" checked={enabed1} onChange={setEnabled1}>
+				check box
+			</MyCheckbox>
+			<MyCheckbox color="green" checked={enabed2} onChange={setEnabled2}>
+				check box
+			</MyCheckbox>
 		</div>
 	)
 }

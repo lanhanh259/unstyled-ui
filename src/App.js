@@ -9,9 +9,9 @@ function App() {
 	return (
 		<div id="app">
 			{/* <SystemUI /> */}
-			{/* <HeadlessUI /> */}
+			<HeadlessUI />
 			{/* <ReactAria /> */}
-			<Radix />
+			{/* <Radix /> */}
 			{/* <BaseUi /> */}
 		</div>
 	)

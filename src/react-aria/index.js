@@ -1,14 +1,13 @@
 import React from 'react'
-import ButtonAria from './button'
-import CheckboxAria from './checkbox'
+import ButtonAria from './ButtonAria'
 import RadioAria from './radio'
 
 function ReactAria() {
 	return (
 		<div>
-			{/* <ButtonAria /> */}
+			<ButtonAria />
 			{/* <CheckboxAria /> */}
-			<RadioAria />
+			{/* <RadioAria /> */}
 		</div>
 	)
 }
