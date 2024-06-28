@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import {
 	Button,
-	Dialog,
+	Dialog as DialogAria,
 	DialogTrigger,
 	Heading,
 	Modal,
@@ -19,11 +19,11 @@ function Dialog() {
 			<DialogTrigger>
 				<Button>About</Button>
 				<Modal isDismissable>
-					<Dialog>
+					<DialogAria>
 						<Heading slot="title">About</Heading>
 						<p>Copyright © 2023 Adobe. All rights reserved.</p>
 						<CloseButton />
-					</Dialog>
+					</DialogAria>
 				</Modal>
 			</DialogTrigger>
 		</div>

@@ -3,6 +3,6 @@
 @tailwind utilities; */
 
 #app {
-	background-color: antiquewhite;
+	background-color: #fff;
 	padding: 40px;
 }

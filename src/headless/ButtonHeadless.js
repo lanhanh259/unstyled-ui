@@ -1,33 +1,25 @@
 import React from 'react'
-import { Button } from '@headlessui/react'
 import styled from 'styled-components'
+import { Button } from '@headlessui/react'
 
 const BasicButton = styled(Button)`
+	width: max-content;
 	padding: 6px 20px;
 	outline: none;
 	vertical-align: middle;
-
-	border: 1px solid;
+	margin-bottom: 14px;
 	border-radius: 4px;
 
 	&[data-disabled] {
-		color: #00000042;
-		border-color: #00000042;
-	}
-	&[data-hover] {
-	}
-`
-const BasicLinkButton = styled(Button)`
-	&[data-disabled] {
-	}
-	&[data-hover] {
+		color: var(--disabled);
+		border-color: var(--disabled);
 	}
 `
 
 const PrimaryButton = styled(BasicButton)`
-	color: #fff;
 	border: none;
-	background-color: orange;
+	color: #fff;
+	background-color: var(--orange);
 
 	&[data-hover] {
 		opacity: 0.7;
@@ -37,7 +29,7 @@ const PrimaryButton = styled(BasicButton)`
 const CancelButton = styled(BasicButton)`
 	color: #fff;
 	border: none;
-	background-color: red;
+	background-color: var(--red);
 
 	&[data-hover] {
 		opacity: 0.7;
@@ -56,18 +48,17 @@ const ConfirmButton = styled(BasicButton)`
 
 function ButtonHeadless() {
 	return (
-		<div>
-			<BasicButton disabled>Button Headless</BasicButton>
-			<BasicLinkButton as="a" href="./">
+		<div style={{ display: 'flex', flexDirection: 'column' }}>
+			<BasicButton disabled>Basic Button</BasicButton>
+			{/* <BasicLinkButton as="a" href="./">
 				LINK
-			</BasicLinkButton>
+			</BasicLinkButton> */}
+
 			<PrimaryButton>Primary Button</PrimaryButton>
 			<CancelButton>Cancel Button</CancelButton>
 			<ConfirmButton>Confirm Button</ConfirmButton>
 
-			<BasicButton
-				style={{ borderColor: 'green', background: 'hotpink' }}
-			>
+			<BasicButton style={{ background: 'hotpink' }}>
 				Button Style
 			</BasicButton>
 		</div>

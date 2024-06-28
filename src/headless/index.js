@@ -8,7 +8,7 @@ function HeadlessUI() {
 	return (
 		<div>
 			{/* <CheckboxHeadless /> */}
-			{/* <ButtonHeadless /> */}
+			<ButtonHeadless />
 			<TabHeadless />
 			{/* <He /> */}
 		</div>
